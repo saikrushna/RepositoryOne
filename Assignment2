@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+ <script type="text/javascript" src="script.js"></script>
+		<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<head>
+		<meta charset="UTF-8">
+		<title>My First HTML Page</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		
+		 <script type="text/javascript" src="script.js"></script>
+    <style>
+	body{
+	background-image: url(../Assignment 1/images/img1.jpg),
+	
+	 background-color: #99FFCC;  
+	 }
+	 .maincontent 
+    {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+	color: red;
+    }
+	.names
+	{
+	color: white;
+	background-image: url(../images/img1.jpg);
+	}
+	
+	.TextBox
+    {
+        width: 400px;
+        height: 25px;
+    }
+	</style>
+	</head>
+	<body style="background-color:black;">
+<div ng-app="">
+		<!-- Header -->
+			<header class="maincontent" >
+				<h1 class="names">Sai Krushna Nagula</h1>
+				
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2 class="names">Hi. This is Sai Krushna Nagula.</h2>
+				<scroll><p style="color:orange;">This is the HTML page that I created for this assignment.</p></scroll>
+				<ul class="actions">
+					
+				</ul>
+			</section>
+
+		<!-- One -->
+			
+		<!-- Three -->
+			<section >
+				<div >
+					<header style="color:white;" >
+						<h2>Please drop a mail to know more about this page.</h2>
+						<p>I will be happy to answer any queries that you might have.</p>
+					</header>
+				</div>
+				<div style="padding:150px; ">
+					<form action="#" method="post">
+						<div>
+							<div style="padding:20px;">
+								<input name="name"  id="name" value="" ng-model="names" placeholder="Name" type="text" class="TextBox">
+								<h3>The name you had entered is: {{names}}</h3>
+							</div>
+							<div style="padding:20px;">
+								<input name="email" id="email" value="" ng-model="emails" placeholder="Email" class="TextBox">
+								<h3>The emailID you entered is: {{emails}}</h3>
+							</div>
+							<div style="padding:20px;">
+								<textarea name="message" id="message" placeholder="Message" cols="20" rows="10"></textarea>
+							</div>
+							<div style="padding:20px;">
+								
+									<input value="Send Message" class="special big" type="submit" onclick="ValidateUser()">
+								
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<script type="text/javascript">
+    function ValidateUser() 
+		{
+		  var name= document.getElementById('name').value;
+		  var mail= document.getElementById('email').value;
+		  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+		  if(name=="")
+    {
+        alert("Please enter your name!");
+        return false;
+    }
+	var isValidEmail = re.test(mail);
+	if (mail =="")
+	{
+	alert("Please enter your email-ID!")
+	return false;
+	}
+    if (isValidEmail) 
+    {
+    } 
+    else
+    { 
+    alert("Please enter a valid email-ID!");
+    return false;
+    }
+	
+	alert("Thank you!")
+		  }
+		  </script>
+	</div>
+	</body>
+</html>
